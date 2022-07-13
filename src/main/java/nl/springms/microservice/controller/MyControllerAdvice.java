@@ -1,4 +1,4 @@
-package nl.springms.microservice.model;
+package nl.springms.microservice.controller;
 
 import nl.springms.microservice.exception.ConstraintViolationException;
 import nl.springms.microservice.exception.UserNotFoundByUserNameException;

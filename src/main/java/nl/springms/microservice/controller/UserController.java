@@ -10,17 +10,17 @@ import java.util.List;
 
 @RestController
 public class UserController {
-    private final UserRepository userRepository;
     private final UserService userService;
 
-    public UserController(UserRepository userRepository, UserService userService) {
-        this.userRepository = userRepository;
+    public UserController(UserService userService) {
         this.userService = userService;
     }
 
     @GetMapping ("/users")
     List<UserDTO> findAll(){
+
         return userService.findAllUsers();
+
     }
 
     @GetMapping ("/user/{id}")

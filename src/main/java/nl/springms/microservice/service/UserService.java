@@ -20,8 +20,7 @@ public class UserService {
 
     public List<UserDTO> findAllUsers(){
         List<UserEntity> users = userRepository.findAll();
-        List<UserDTO> usersDTO = users.stream().map(u -> new UserDTO(u.getUserName(), u.getFirstName(), u.getLastName())).toList();
-        return usersDTO;
+        return users.stream().map(u -> new UserDTO(u.getUserName(), u.getFirstName(), u.getLastName())).toList();
     }
 
     public UserDTO customFindMethod(Long id) {
